@@ -1,0 +1,47 @@
+version: "2.0"
+
+intents:
+  - greet
+  - ask_course
+  - ask_define
+  - bot_challenge
+  - goodbye
+entities:
+  - langue
+slots:
+  langue:
+    type: text
+    influence_conversation: false
+
+responses:
+  utter_greet:
+    - text: "Chào bạn. Bạn muốn được tư vấn khóa học nào bên trung tâm?"
+
+  utter_course:
+    - text: "Trung tâm hiện đang có hai khóa học là java và python. Bạn muốn đăng kí khóa học nào?"
+
+  utter_define_java:
+    - text: "{langue}"
+
+  utter_define_python:
+    - text: "{langue}"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_course
+  - utter_greet
+  - utter_course
+  - utter_define_java
+  - utter_define_python
+  - utter_goodbye
+  - utter_iamabot
+

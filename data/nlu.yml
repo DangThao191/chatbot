@@ -1,0 +1,52 @@
+version: "2.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: ask_course
+    examples: |
+      - Tôi muốn đăng kí khóa học ở trung tâm
+      - Trung tâm đang có những khóa học nào?
+      - Đó là khóa học gì?
+
+  - intent: ask_define
+    examples: |
+      - Cho t hỏi [java](langue) là gì
+      - [Java](langue) là gì hả
+      - [Python](langue) có nên học không
+      - Học [Java](langue) có khó không
+      - [Java](langue) là gì?
+      - [Python](langue) là gì?
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
